@@ -1,0 +1,28 @@
+h1 Детали запроса на груз
+
+- if @cargo_request
+  dl
+    dt Имя:
+    dd = @cargo_request.first_name
+
+    dt Фамилия:
+    dd = @cargo_request.last_name
+
+    dt Отчество:
+    dd = @cargo_request.middle_name
+
+    dt Номер телефона:
+    dd = @cargo_request.phone
+
+    dt Почта:
+    dd = @cargo_request.email
+
+    dt Расстояние:
+    dd = @cargo_request.distance
+
+    dt Цена:
+    dd = @cargo_request.price
+- else
+  p Запрос на груз не найден.
+
+= link_to 'Назад', new_cargo_request_path

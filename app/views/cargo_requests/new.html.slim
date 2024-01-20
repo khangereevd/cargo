@@ -1,0 +1,7 @@
+h1 Новый запрос на груз
+
+= form_for(@cargo_request, url: cargo_requests_path, method: :post) do |form|
+  = render 'form', form: form
+
+  .actions
+    = form.submit 'Создать запрос на груз'
