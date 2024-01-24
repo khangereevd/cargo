@@ -1,0 +1,18 @@
+h1 Мои заявки
+
+- if @cargo_requests.any?
+  table
+    thead
+      tr
+        th ID
+        th Заявки
+    tbody
+      - @cargo_requests.each do |cargo_request|
+        tr
+          td= cargo_request.id
+          td
+            = link_to 'Просмотреть', cargo_request_path(cargo_request)
+-else
+  p У вас нет заявок
+
+= link_to 'Новая заявка', new_cargo_request_path

@@ -46,6 +46,10 @@ gem 'slim'
 gem 'httparty'
 gem 'activeadmin'
 gem 'devise'
+gem 'carrierwave'
+gem 'mini_magick', '4.12.0'
+gem 'kaminari'
+gem 'aasm'
 
 # Use Sass to process CSS
 gem "sassc-rails"
