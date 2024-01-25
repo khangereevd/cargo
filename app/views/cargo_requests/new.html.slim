@@ -1,7 +1,12 @@
 h1 Новый запрос на груз
 
-= form_for(@cargo_request, url: cargo_requests_path, method: :post) do |form|
+= form_for(@cargo_request, url: cargo_requests_path(@cargo_request), method: :post) do |form|
   = render 'form', form: form
 
   .actions
     = form.submit 'Создать запрос на груз'
+
+    - if user_signed_in?
+      = link_to 'Посмотреть свои заявки', cargo_requests_path
+    - else
+      = link_to 'Посмотреть свои заявки', new_user_registration_path
